@@ -1,0 +1,8 @@
+1.创建一个goods.sh文件 让他执行update.php 文件
+#!/bin/bash
+date "+%G-%m-%d %H:%M:%s"
+cd /data/wwwroot/default/
+/usr/local/php/bin/php update.php
+2.crontab -e 命令 一个.sh执行
+*/1 * * * *  /data/wwwroot/default/goods.sh  >> /data/wwwroot/default/goods.log 2>&1
+
